@@ -10,8 +10,20 @@ namespace TestConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SortString("asoiuyhnafdmnawelk");
             Console.ReadLine();
         }
+
+        static void SortString(string input)
+        {
+            var s = input.ToCharArray().ToList().OrderBy(x => x);
+
+            foreach (var item in s)
+            {
+                Console.Write(item);
+            }
+                        
+        }
+
     }
 }
