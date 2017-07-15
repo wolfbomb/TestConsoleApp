@@ -10,7 +10,8 @@ namespace TestConsoleApp
     {
         static void Main(string[] args)
         {
-            SortString("asoiuyhnafdmnawelk");
+            //SortString("asoiuyhnafdmnawelk");
+            Fibonacci(15);
             Console.ReadLine();
         }
 
@@ -20,9 +21,27 @@ namespace TestConsoleApp
 
             foreach (var item in s)
             {
-                Console.Write(item);
+                Console.WriteLine(item);
             }
                         
+        }
+
+        static void Fibonacci(int length)
+        {
+            int num1 = 0, num2 = 1, num3 = 0;
+
+
+            Console.WriteLine(num1);
+            for (int i = 0; i < length; i++)
+            {
+
+                num1 = num2;
+                num2 = num3;
+                num3 = num1 + num2;
+                Console.WriteLine(num3);
+
+
+            }
         }
 
     }
